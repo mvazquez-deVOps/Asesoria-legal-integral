@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>JUXA | Inteligencia Legal Moderna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                blue: '#1A73E8',   // Google Search Blue (More readable)
+                green: '#1E8E3E',  // Sophisticated Green
+                yellow: '#F9AB00', // Darker Yellow for contrast
+                red: '#D93025',    // Professional Red
+                violet: '#7C3AED', 
+                emerald: '#059669',
+                coral: '#E11D48',
+              },
+              neutral: {
+                50: '#F8F9FA',  // Fondo base suave
+                100: '#F1F3F4', // Gris de sección
+                200: '#E8EAED', // Bordes
+                300: '#DADCE0', // Bordes fuertes
+                400: '#9AA0A6', // Texto secundario
+                600: '#5F6368', // Texto cuerpo
+                800: '#202124', // Texto títulos (Google Dark)
+                900: '#171717',
+              },
+              surface: '#FFFFFF',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'slide-up': 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(15px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        background-color: #F8F9FA; 
+        color: #5F6368; 
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .saas-card {
+        background: #FFFFFF;
+        border: 1px solid #E8EAED;
+        border-radius: 1.25rem;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 1px 2px rgba(60,64,67,0.1), 0 1px 3px 1px rgba(60,64,67,0.05);
+      }
+      .saas-card:hover {
+        box-shadow: 0 10px 25px -5px rgba(60,64,67,0.15);
+        transform: translateY(-4px);
+        border-color: #DADCE0;
+      }
+      .google-search-bar {
+        box-shadow: 0 1px 6px rgba(32,33,36,0.15);
+        border: 1px solid #E8EAED;
+        transition: all 0.2s ease;
+      }
+      .google-search-bar:hover {
+        box-shadow: 0 1px 8px rgba(32,33,36,0.25);
+        border-color: transparent;
+      }
+      .pill-button {
+        border-radius: 9999px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 600;
+      }
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #F8F9FA; }
+      ::-webkit-scrollbar-thumb { background: #DADCE0; border-radius: 10px; border: 2px solid #F8F9FA; }
+      
+      .category-strip {
+        height: 5px;
+        border-radius: 1.25rem 1.25rem 0 0;
+      }
+      
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased font-sans">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
