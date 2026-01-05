@@ -20,6 +20,8 @@ export enum AppStep {
 }
 
 export interface UserData {
+  id?: string;
+  userId?: string;
   name: string;
   email: string;
   phone: string;
@@ -30,8 +32,12 @@ export interface UserData {
   location: string; 
   counterparty: string; 
   processStatus: string; 
-  hasChildren?: boolean;
-  hasViolence?: boolean;
+  hasChildren?: string;
+  hasViolence?: string;
+  isPaid?: boolean;
+  diagnosisPreference?: string;
+  createAdt?: string;
+
 }
 
 export interface Message {
